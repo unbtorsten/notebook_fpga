@@ -6,15 +6,10 @@
 - Using prjxray-db for xc7k325t from jrrk2: https://github.com/jrrk2/prjxray-db/tree/k325/kintex7
 - Adapting the basic nextpnr readme instructions for the branch nextpnr-xilinx/xilinx-upstream-k7:
 
-1) Run pypy3 xilinx/python/bbaexport.py --device xc7a35tcsg324-1 --bba
-xilinx/xc7a35t.bba (regular cpython works as well, but is a lot slower)
-2) Run ./bbasm xilinx/xc7k325t.bba xilinx/xc7k325t.bin -l (add option
-for little endian)
-3) Set XRAY_DIR to the path where Project Xray has been cloned and
-built (you may also need to patch out the Vivado check for
-utils/environment.sh in Xray)
-4) Run blinky.sh in xilinx/examples/genesys2 (may need to adjust binary
-paths)
+1) Run `pypy3 xilinx/python/bbaexport.py --device xc7k325tffg900-2 --bba xilinx/xc7k325t.bba`
+2) Run `./bbasm xilinx/xc7k325t.bba xilinx/xc7k325t.bin -l` (add option for little endian)
+3) Set `XRAY_DIR` to the path where Project Xray has been cloned and built (you may also need to patch out the Vivado check for utils/environment.sh in Xray)
+4) Run `blinky.sh` in `xilinx/examples/genesys2` (may need to adjust binary paths)
 
 Output seems to point to an issue with the documented cells. Does this point us back to doing a better job at documenting, i.e. building prjxray-db?
 
