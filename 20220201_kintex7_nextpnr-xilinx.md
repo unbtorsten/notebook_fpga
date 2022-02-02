@@ -1,4 +1,5 @@
-An update on using nextpnr-xilinx to generate a bitstream for Genesys2/xc7k325t:
+## An update on using nextpnr-xilinx to generate a bitstream for Genesys2/xc7k325t
+01Feb2022
 
 - Using the latest yosys 0.13+28 (git sha1 bf85dfee5, gcc 10.2.1-6 -fPIC -Os), available from https://github.com/YosysHQ/oss-cad-suite-build/releases or build from sources
 - Patching nextpnr-xilinx/xilinx-upstream-k7 based on hansfbaier's recommendation: https://github.com/hansfbaier/nextpnr-xilinx/commit/1c89de2d7f7025e870a82c3ad5788fc58bf0f48a
@@ -18,6 +19,7 @@ paths)
 Output seems to point to an issue with the documented cells. Does this point us back to doing a better job at documenting, i.e. building prjxray-db?
 
 
+```
 ${XRAY_UTILS_DIR}/fasm2frames.py --part xc7k325tffg900-2 --db-root
 ${XRAY_UTILS_DIR}/../database/kintex7 blinky.fasm > blinky.frames
 Traceback (most recent call last):
